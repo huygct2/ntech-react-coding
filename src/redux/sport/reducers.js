@@ -3,12 +3,17 @@ import actions from "./actions";
 import _ from 'lodash'
 
 const initState = new Map({
-  loading: false
+  sport: {}
 });
 
 export default function sportReducer(state = initState, action) {
   switch (action.type) {
-
+    case actions.GET_LATEST_SPORT_SUCCESS:
+      return state
+        .set('sport', action.sport)
+    case actions.GET_LATEST_SPORT_ERROR:
+      return state
+        .set('sport', {})
     default:
       return state;
   }

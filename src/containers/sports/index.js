@@ -4,16 +4,27 @@ import moment from 'moment';
 
 import Widget from '../../components/widget';
 import SportContent from '../../components/sport/content';
+import actions from '../../redux/sport/actions'
 
 import './style.scss'
 
+const {
+  getLatestSport
+} = actions;
+
 class Sport extends Component {
+  componentWillMount() {
+    this.props.getLatestSport()
+  }
+
   render() {
-    const {  } = this.props;
+    const { sport } = this.props;
 
     const content = (
       <SportContent/>
     )
+
+    console.log('sport: ', sport)
 
     return (
       <div className="sport">
@@ -29,11 +40,11 @@ class Sport extends Component {
 }
 
 function mapStateToProps(state) {
-  const { loading } = state.Sport.toJS();
+  const { sport } = state.Sport.toJS();
   return {
-
+    sport
   };
 }
 export default connect(mapStateToProps, {
-  
+  getLatestSport
 })(Sport);

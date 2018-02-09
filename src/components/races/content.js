@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SportContent extends Component {
+class RaceContent extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class SportContent extends Component {
   }
 }
 
-export default SportContent;
+export default RaceContent;
