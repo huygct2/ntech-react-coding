@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class Sport extends Component {
   render() {
     return (
-      <div>
+      <div className="sport">
         sport
       </div>
     );

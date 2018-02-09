@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class Races extends Component {
   render() {
     return (
-      <div>
+      <div className="race">
         Races
       </div>
     );
