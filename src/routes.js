@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/header';
-import Home from './views/home';
-import Sport from './views/sports';
-import Races from './views/races';
+import Home from './containers/home';
+import Sport from './containers/sports';
+import Races from './containers/races';
 
 const PublicRoutes = () => (
   <Router>

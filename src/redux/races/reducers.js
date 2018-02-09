@@ -6,7 +6,7 @@ const initState = new Map({
   loading: false
 });
 
-export default function contactReducer(state = initState, action) {
+export default function raceReducer(state = initState, action) {
   switch (action.type) {
 
     default:

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
+import './style.scss'
+
 class Races extends Component {
   render() {
     return (
@@ -21,4 +23,3 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps, {
   
 })(Races);
-
