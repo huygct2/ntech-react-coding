@@ -1,13 +1,10 @@
 import _ from 'lodash';
 
 export default class Race {
-  constructor(...attributes) {
-    if (attributes) {
-      Object.assign(this, ...attributes)
+  constructor(...data) {
+    if (data) {
+      Object.assign(this, ...data);
     }
-  }
-
-  get propositions () {
-    return _.get(this, 'markets.0.propositions')
+    this.runners = this.runners.slice(0, 6);
   }
 }

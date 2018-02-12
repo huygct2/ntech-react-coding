@@ -3,7 +3,7 @@ import actions from "./actions";
 import _ from 'lodash'
 
 const initState = new Map({
-  race: null
+  race: {}
 });
 
 export default function raceReducer(state = initState, action) {

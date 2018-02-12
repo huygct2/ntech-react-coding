@@ -30,7 +30,7 @@ class SportContent extends Component {
 
   renderSportFooter() {
     const { marketLength } = this.props;
-    return <RaceFooter marketLength={marketLength} />
+    return <RaceFooter title={`View all markets (${marketLength})`}/>
   }
 
   render() {

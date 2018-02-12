@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BetOdd from '../betOdd/betOdd';
 import RaceFooter from './raceFooter';
+import _ from 'lodash'
 
 import './style.scss';
 
@@ -21,63 +22,45 @@ class RaceContent extends Component {
     )
   }
 
-  renderRunnerInfo() {
-    const runners = [
-      {
-        number: 3,
-        name: 'Tosen Stardom',
-        returnWin: 4.20,
-        returnPlace: 1.75
-      },
-      {
-        number: 1,
-        name: 'Hartnell',
-        returnWin: 5.00,
-        returnPlace: 2.00
-      },
-      {
-        number: 11,
-        name: 'Shilelagh',
-        returnWin: 7.00,
-        returnPlace: 2.45
-      },
-      {
-        number: 7,
-        name: 'Mr Sneaky',
-        returnWin: 7.50,
-        returnPlace: 2.50
-      }
-    ]
+  getBetOdd(runner, key) {
+    let bet = _.get(runner, 'fixedOdds.' + key);
+    if(!bet) {
+      bet = 0;
+    }
+    return bet.toFixed(2);
+  }
 
+  renderRunnerInfo(runners) {
     return (
       <div className="runners__list">
-        {runners.map((runner, i) => 
+        {runners.map((runner, i) =>
           <div key={i} className="runners__list__item columns">
             <div className="runners__name column is-6 has-text-left">
-              <span className="has-text-weight-semibold">{ runner.number }. { runner.name }</span>
+              <span className="has-text-weight-semibold">{runner.barrierNumber}. {runner.runnerName}</span>
             </div>
             <div className="column is-3">
-              <BetOdd returnWin={runner.returnWin.toFixed(2)} />
+              <BetOdd returnWin={this.getBetOdd(runner, 'returnWin')} />
             </div>
             <div className="column is-3">
-              <BetOdd returnWin={runner.returnPlace.toFixed(2)} />
+              <BetOdd returnWin={this.getBetOdd(runner, 'returnPlace')} />
             </div>
           </div>
-        )}  
+        )}
       </div>
     )
   }
 
   renderRunnerFooter() {
-    const { marketLength } = this.props;
-    return <RaceFooter marketLength={marketLength} />
+    return <RaceFooter title={'View full race card'}/>
   }
 
   render() {
+    const { runners = [] } = this.props;
+
     return (
       <div className="runners has-text-centered">
         {this.renderHeader()}
-        {this.renderRunnerInfo()}
+        {this.renderRunnerInfo(runners)}
         {this.renderRunnerFooter()}
       </div>
     );

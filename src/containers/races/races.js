@@ -4,6 +4,7 @@ import moment from 'moment';
 
 import Widget from '../../components/widget/widget';
 import actions from '../../redux/races/actions'
+import { timeInterval } from '../../constants/config';
 
 import RaceContent from '../../components/races/raceContent';
 import racingImg from '../../images/racing.jpg'
@@ -17,21 +18,28 @@ class Races extends Component {
     this.props.getLatestRace()
   }
 
+  componentDidMount() {
+    this.fetchtLatestRaceInterval = window.setInterval(
+      this.props.getLatestRace.bind(this), timeInterval * 1000)
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.fetchtLatestRaceInterval)
+  }
+
   render() {
-    const { race } = this.props;
+    const { race = {} } = this.props;
 
     const content = (
-      <RaceContent marketLength={race.marketLength} />
+      <RaceContent runners={race.runners}/>
     )
-    console.log(race)
 
     return (
       <div className="containers-wrapper">
         <Widget
-          typeBet={'Race'}
-          // time={moment()}
-          time="1d 12h"
+          time={race.raceStartTime}
           content={content}
+          title={race.raceName}
           imageUrl={racingImg}
         />
       </div>

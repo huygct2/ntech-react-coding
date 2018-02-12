@@ -18,10 +18,12 @@ class Widget extends Component {
           <figure className="image is-2by1">
             <img src={imageUrl} alt="Placeholder image" />
           </figure>
-          <div className="box-left has-text-weight-bold is-uppercase">
-            <img src={logoImg} alt="logo sport" />
-            <span>{typeBet}</span>
-          </div>
+          {
+            typeBet ? <div className="box-left has-text-weight-bold is-uppercase">
+              <img src={logoImg} alt="logo sport" />
+              <span>{typeBet}</span>
+            </div> : null
+          }
           <div className="box-right has-text-white has-text-weight-bold">
             <span>Starts in {amountTime.map((time, i) => <span key={`line-${i}`}>
               <span className="amount-label">{time.amount}</span>

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 class RaceFooter extends Component {
   render() {
-    const { marketLength, description } = this.props;
+    const { title, description } = this.props;
 
     return (
       <div className="sports__footer">
         <div className="sports__all">
-          <a className="has-text-weight-bold is-uppercase">View all markets {`(${marketLength})`}</a>
+          <a className="has-text-weight-bold is-uppercase">{title}</a>
         </div>
         <span>{description}</span>
       </div>
@@ -18,11 +18,11 @@ class RaceFooter extends Component {
 
 RaceFooter.defaultProps = {
   description: 'Prices indicative until login & may change before bet is accepted',
-  marketLength: 0
+  title: ''
 };
 
 RaceFooter.propTypes = {
-  marketLength: PropTypes.number,
+  title: PropTypes.string,
   description: PropTypes.string
 }
 
