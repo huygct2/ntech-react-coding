@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import logoImg from '../../images/logo-ball.png'
 
 import './style.scss'
 
@@ -16,7 +17,7 @@ class Widget extends Component {
           </figure>
           {typeBet.toLowerCase() !== 'race'
             ? <div className="box-left has-text-weight-bold is-uppercase">
-                <img src="http://moziru.com/images/logo-clipart-soccer-4.png" alt="logo sport" />
+              <img src={logoImg} alt="logo sport" />
                 <span>{typeBet}</span>
               </div>
             : null
