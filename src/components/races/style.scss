@@ -1,0 +1,41 @@
+.runners {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &__header {
+    width: 100%;
+    margin: 0 !important;
+    color: rgb(102, 111, 124);
+  }
+  
+  &__list {
+    width: 100%;
+    padding: .75em;
+    margin-top: -.75rem;
+
+    &__item {
+      padding: .3em 0;
+      margin-bottom: 0 !important;
+    }
+  }
+
+
+  &__name {
+    display: flex;
+    align-self: center;
+    font-size: 1.15em;
+  }
+
+  &__all {
+    margin: 0 0 1.1em 0;
+
+    a {
+      font-size: 1.5em;
+      
+      &:hover {
+        color: #215ab6;
+      }
+    }
+  }
+}

@@ -30,9 +30,10 @@ class Races extends Component {
       <div className="race">
         <Widget
           typeBet={'Race'}
-          time={moment()}
+          // time={moment()}
+          time="1d 12h"
           content={content}
-          imageUrl={'https://bulma.io/images/placeholders/1280x960.png'}
+          imageUrl={'http://livedoor.blogimg.jp/matomete_yaroukan/imgs/b/9/b922ec37.jpg'}
         />
       </div>
     );

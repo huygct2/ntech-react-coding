@@ -29,10 +29,11 @@ class Sport extends Component {
     return (
       <div className="sport">
         <Widget
-          typeBet={'Football'}
-          time={moment()}
+          typeBet={'Soccer'}
+          // time={moment()}
+          time="1d 12h"
           content={content}
-          imageUrl={'https://bulma.io/images/placeholders/1280x960.png'}
+          imageUrl={'https://images.performgroup.com/di/library/GOAL/d0/a2/alexis-sanchez-mesut-ozil-arsenal_1duislpvg0rpe1mdkhh5r79wyf.jpg?t=1675016968&quality=90&w=1280'}
         />
       </div>
     );

@@ -1,0 +1,26 @@
+.sports {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &__header {
+    color: rgb(102, 111, 124);
+    margin-bottom: 1.1em;
+  }
+
+  &__bet {
+    width: 100%;
+  }
+
+  &__all {
+    margin: .5em 0 1em 0;
+
+    a {
+      font-size: 1.5em;
+
+      &:hover {
+        color: #215ab6;
+      }
+    }
+  }
+}

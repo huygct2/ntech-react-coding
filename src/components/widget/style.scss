@@ -1,26 +1,58 @@
 .widget {
   min-width: 30%;
+
+  .card-image {
+    font-size: 1.4em;
+  }
+
   .box-left {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
+    padding: .2em .5em;
+    background: rgb(244, 206, 55);
+    z-index: 2;
+
+    img {
+      height: 1.35em;
+      width: 1.35em;
+      margin-right: .3em;
+    }
   }
   .box-right {
     position: absolute;
     top: 0;
     right: 0;
+    padding: .2em .7em;
+    z-index: 2;
+  }
+  .filter-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    background: black;
+    z-index: 1;
   }
   .content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     position: absolute;
-    top: 50px;
-    .title {
-      font-weight: bold;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    text-align: center;
+    z-index: 2;
+
+    h2 {
+      margin: .25em;
     }
-    .description {
-  
+
+    &__title {
+      color: white !important;
     }
   }
 }

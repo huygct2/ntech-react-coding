@@ -10,28 +10,32 @@ class Widget extends Component {
     return (
       <div className="card widget">
         <div className="card-image">
-          <figure className="image is-4by3">
+          <div className="filter-black"></div>  
+          <figure className="image is-2by1">
             <img src={imageUrl} alt="Placeholder image" />
           </figure>
-          <div className="box-left">
-            {typeBet}
-          </div>
-          <div className="box-right">
+          {typeBet.toLowerCase() !== 'race'
+            ? <div className="box-left has-text-weight-bold is-uppercase">
+                <img src="http://moziru.com/images/logo-clipart-soccer-4.png" alt="logo sport" />
+                <span>{typeBet}</span>
+              </div>
+            : null
+          }
+          <div className="box-right has-text-white has-text-weight-bold">
             <span>{`Starts in ${time}`}</span>
           </div>
-          <div className="content">
-            <div className="title">
-              <h3>{title}</h3>
-            </div>
-            <div className="description">
-              <span>{title}</span>
-            </div>
+          <div className="content has-text-white">
+            <h2 className="content__title has-text-weight-bold is-uppercase">{title}</h2>
+            {typeBet.toLowerCase() !== 'race'
+              ? <span className="content__description has-text-weight-semibold">{description}</span>
+              : null
+            }
           </div>
         </div>
         <div className="card-content">
           {content}
         </div>
-      </div>
+        </div>
     );
   }
 }
@@ -41,8 +45,8 @@ Widget.defaultProps = {
   time: '',
   imageUrl: '',
   content: <div />,
-  description: '',
-  title: ''
+  description: 'Arsenal are without an away win in 5 matches',
+  title: 'EPL'
 };
 
 Widget.propTypes = {
