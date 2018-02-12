@@ -14,7 +14,7 @@ exports[`Widget component 1`] = `
       className="image is-2by1"
     >
       <img
-        alt="Placeholder image"
+        alt="background"
         src=""
       />
     </figure>
