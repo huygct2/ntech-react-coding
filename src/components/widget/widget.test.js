@@ -1,12 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import moment from 'moment';
 import Widget from './widget';
 
 test('Widget component', () => {
+  const time = moment()
   const component = renderer.create(
     <Widget
       typeBet='Soccer'
-      time='2018-02-12T11:00:00.000Z'
+      time={time}
+      timeNow={time}
       title='EPL'
       description='Arsenal'
     />

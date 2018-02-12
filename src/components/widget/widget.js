@@ -7,7 +7,8 @@ import './style.scss';
 
 class Widget extends Component {
   render() {
-    const { imageUrl, content, typeBet, time, title, description } = this.props;
+    const { imageUrl, content, typeBet, time, timeNow,
+      title, description } = this.props;
 
     return (
       <div className="card widget">
@@ -23,7 +24,7 @@ class Widget extends Component {
             </div> : null
           }
           <div className="box-right has-text-white has-text-weight-bold">
-            <Timer time={time} />
+            <Timer time={time} timeNow={timeNow}/>
           </div>
           <div className="content has-text-white">
             <h2 className="content__title has-text-weight-bold is-uppercase">{title}</h2>
@@ -48,7 +49,6 @@ Widget.defaultProps = {
 
 Widget.propTypes = {
   typeBet: PropTypes.string,
-  time: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string
 }

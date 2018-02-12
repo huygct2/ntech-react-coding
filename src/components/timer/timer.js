@@ -42,5 +42,6 @@ export default class Timer extends React.Component {
 }
 
 Timer.propTypes = {
-  time: PropTypes.any
+  time: PropTypes.any,
+  timeNow: PropTypes.any  
 }

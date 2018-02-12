@@ -38,12 +38,12 @@ exports[`Widget component 1`] = `
           <span
             className="amount-label"
           >
-            1
+            0
           </span>
           <span
             className="unit-label"
           >
-            h
+            s
              
           </span>
         </span>
