@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import logoImg from '../../images/logo-ball.png';
 import Timer from '../timer/timer';
 
+import logoImg from '../../images/logo-ball.png';
 import './style.scss';
 
 class Widget extends Component {
@@ -53,4 +53,4 @@ Widget.propTypes = {
   title: PropTypes.string
 }
 
-export default Widget
+export default Widget;

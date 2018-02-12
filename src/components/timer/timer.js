@@ -6,8 +6,9 @@ import RelativeTime from '../../utils/RelativeTime';
 export default class Timer extends React.Component {
   constructor(props) {
     super(props)
+    const { time, timeNow } = this.props;
     this.state = {
-      amountTime: RelativeTime.toParts(this.props.time)
+      amountTime: RelativeTime.toParts(time, timeNow)
     }
   }
 
@@ -18,7 +19,7 @@ export default class Timer extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.intervailID)
+    clearInterval(this.intervailID);
   }
 
   tick() {
@@ -41,5 +42,5 @@ export default class Timer extends React.Component {
 }
 
 Timer.propTypes = {
-  time: PropTypes.string
+  time: PropTypes.any
 }

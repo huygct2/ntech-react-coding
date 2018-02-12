@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './style.scss'
+import './style.scss';
 
 class BetOdd extends Component {
   render() {
@@ -18,4 +18,4 @@ BetOdd.defaultProps = {
   returnWin: 0
 };
 
-export default BetOdd
+export default BetOdd;

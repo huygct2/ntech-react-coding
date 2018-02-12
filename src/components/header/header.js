@@ -5,7 +5,6 @@ import { paths } from '../../constants/path';
 
 export default class extends Component {
   render() {
-    console.log(this.props)
     return (
       <nav className="navbar is-transparent">
         <div id="navbarExampleTransparentExample" className="navbar-menu">

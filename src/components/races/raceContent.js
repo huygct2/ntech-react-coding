@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BetOdd from '../betOdd/betOdd';
 import RaceFooter from './raceFooter';
-import _ from 'lodash'
+import _ from 'lodash';
 
 import './style.scss';
 

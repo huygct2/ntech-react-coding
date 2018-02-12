@@ -11,6 +11,6 @@ export default class Sport {
   }
 
   get propositions () {
-    return _.get(this, 'markets.0.propositions')
+    return _.get(this, 'markets.0.propositions');
   }
 }

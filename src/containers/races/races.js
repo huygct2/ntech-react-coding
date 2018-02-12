@@ -2,28 +2,25 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 
 import Widget from '../../components/widget/widget';
-import actions from '../../redux/races/actions'
+import actions from '../../redux/races/actions';
 import { timeInterval } from '../../constants/config';
 
 import RaceContent from '../../components/races/raceContent';
-import racingImg from '../../images/racing.jpg'
+import racingImg from '../../images/racing.jpg';
 
 const {
   getLatestRace
 } = actions;
 
 class Races extends Component {
-  componentWillMount() {
-    this.props.getLatestRace()
-  }
-
   componentDidMount() {
+    this.props.getLatestRace();
     this.fetchtLatestRaceInterval = window.setInterval(
-      this.props.getLatestRace.bind(this), timeInterval * 1000)
+      this.props.getLatestRace.bind(this), timeInterval * 1000);
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.fetchtLatestRaceInterval)
+    window.clearInterval(this.fetchtLatestRaceInterval);
   }
 
   render() {

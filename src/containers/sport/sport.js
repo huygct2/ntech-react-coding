@@ -15,11 +15,11 @@ class Sport extends Component {
   componentDidMount() {
     this.props.getLatestSport()    
     this.fetchLatestSportInterval = window.setInterval(
-      this.props.getLatestSport.bind(this), timeInterval * 1000)
+      this.props.getLatestSport.bind(this), timeInterval * 1000);
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.fetchLatestSportInterval)
+    window.clearInterval(this.fetchLatestSportInterval);
   }
 
   render() {
