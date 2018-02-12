@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import logoImg from '../../images/logo-ball.png'
 import RelativeTime from '../../utils/RelativeTime';
@@ -17,26 +18,20 @@ class Widget extends Component {
           <figure className="image is-2by1">
             <img src={imageUrl} alt="Placeholder image" />
           </figure>
-          {typeBet.toLowerCase() !== 'race'
-            ? <div className="box-left has-text-weight-bold is-uppercase">
-              <img src={logoImg} alt="logo sport" />
-                <span>{typeBet}</span>
-              </div>
-            : null
-          }
+          <div className="box-left has-text-weight-bold is-uppercase">
+            <img src={logoImg} alt="logo sport" />
+            <span>{typeBet}</span>
+          </div>
           <div className="box-right has-text-white has-text-weight-bold">
             <span>Starts in {amountTime.map((time, i) => <span key={`line-${i}`}>
               <span className="amount-label">{time.amount}</span>
-              <span className="unit-label">{time.unit}</span>
+              <span className="unit-label">{time.unit} </span>
             </span>
             )}</span>
           </div>
           <div className="content has-text-white">
             <h2 className="content__title has-text-weight-bold is-uppercase">{title}</h2>
-            {typeBet.toLowerCase() !== 'race'
-              ? <span className="content__description has-text-weight-semibold">{description}</span>
-              : null
-            }
+            <span className="content__description has-text-weight-semibold">{description}</span>
           </div>
         </div>
         <div className="card-content">
@@ -48,17 +43,18 @@ class Widget extends Component {
 }
 
 Widget.defaultProps = {
-  typeBet: '',
-  time: '',
   imageUrl: '',
   content: <div />,
-  description: 'Arsenal are without an away win in 5 matches',
-  title: 'EPL'
+  description: '',
+  title: 'EPL',
+  typeBet: ''
 };
 
 Widget.propTypes = {
-
+  typeBet: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  title: PropTypes.string
 }
-
 
 export default Widget

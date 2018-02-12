@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import BetOdd from '../betOdd/betOdd'
-import './style.scss'
+import BetOdd from '../betOdd/betOdd';
+import RaceFooter from './raceFooter';
+
+import './style.scss';
 
 class RaceContent extends Component {
   renderHeader() {
@@ -67,14 +69,8 @@ class RaceContent extends Component {
   }
 
   renderRunnerFooter() {
-    return (
-      <div className="runners__footer">
-        <div className="runners__all">
-          <a className="has-text-weight-bold is-uppercase">View full race card</a>
-        </div>
-        <span>Prices indicative until login &may change before bet is accepted</span>
-      </div>
-    )
+    const { marketLength } = this.props;
+    return <RaceFooter marketLength={marketLength} />
   }
 
   render() {

@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import moment from 'moment';
 
 import Widget from '../../components/widget/widget';
-import SportContent from '../../components/sport/content';
-import actions from '../../redux/sport/actions'
-import arsenalImg from '../../images/arsenal.jpg'
-
+import SportContent from '../../components/sport/sportContent';
+import actions from '../../redux/sport/actions';
+import arsenalImg from '../../images/arsenal.jpg';
+import { timeInterval } from '../../constants/config';
 const {
   getLatestSport
 } = actions;
@@ -16,11 +16,22 @@ class Sport extends Component {
     this.props.getLatestSport()
   }
 
+  componentDidMount() {
+    this.fetchLatestSportInterval = window.setInterval(
+      this.props.getLatestSport.bind(this), timeInterval * 1000)
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.fetchLatestSportInterval)
+  }
+
   render() {
     const { sport } = this.props;
-
+    
     const content = (
-      <SportContent propositions={sport.propositions}/>
+      <SportContent
+        marketLength={sport.marketLength}
+        propositions={sport.propositions} />
     )
 
     return (

@@ -1,10 +1,11 @@
 import _ from 'lodash';
 
 export default class Sport {
-  constructor(competitionName, sportName, ...data) {
+  constructor(marketLength, competitionName, sportName, ...data) {
     if (data) {
       Object.assign(this, ...data);
     }
+    this.marketLength = marketLength;
     this.competitionName = competitionName;
     this.sportName = sportName;
   }

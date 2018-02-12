@@ -1,0 +1,1 @@
+export const timeInterval = 10; // seconds

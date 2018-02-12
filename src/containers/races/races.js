@@ -5,7 +5,7 @@ import moment from 'moment';
 import Widget from '../../components/widget/widget';
 import actions from '../../redux/races/actions'
 
-import RaceContent from '../../components/races/content';
+import RaceContent from '../../components/races/raceContent';
 import racingImg from '../../images/racing.jpg'
 
 const {
@@ -21,7 +21,7 @@ class Races extends Component {
     const { race } = this.props;
 
     const content = (
-      <RaceContent />
+      <RaceContent marketLength={race.marketLength} />
     )
     console.log(race)
 
