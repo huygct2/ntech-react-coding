@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import BetOdd from '../betOdd/betOdd';
 import RaceFooter from './raceFooter';
 import _ from 'lodash';
@@ -47,11 +48,11 @@ class RaceContent extends Component {
           </div>
         )}
       </div>
-    )
+    );
   }
 
   renderRunnerFooter() {
-    return <RaceFooter title='View full race card'/>
+    return <RaceFooter title="View full race card"/>;
   }
 
   render() {
@@ -66,5 +67,13 @@ class RaceContent extends Component {
     );
   }
 }
+
+RaceContent.defaultProps = {
+  runners: []
+};
+
+RaceContent.propTypes = {
+  runners: PropTypes.array
+};
 
 export default RaceContent;

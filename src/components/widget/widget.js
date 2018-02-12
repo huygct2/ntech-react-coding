@@ -13,7 +13,7 @@ class Widget extends Component {
     return (
       <div className="card widget">
         <div className="card-image">
-          <div className="filter-black"></div>
+          <div className="filter-black"/>
           <figure className="image is-2by1">
             <img src={imageUrl} alt="background" />
           </figure>
