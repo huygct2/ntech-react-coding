@@ -6,6 +6,7 @@ import Widget from '../../components/widget/widget';
 import actions from '../../redux/races/actions'
 
 import RaceContent from '../../components/races/content';
+import racingImg from '../../images/racing.jpg'
 
 const {
   getLatestRace
@@ -31,7 +32,7 @@ class Races extends Component {
           // time={moment()}
           time="1d 12h"
           content={content}
-          imageUrl={'http://livedoor.blogimg.jp/matomete_yaroukan/imgs/b/9/b922ec37.jpg'}
+          imageUrl={racingImg}
         />
       </div>
     );

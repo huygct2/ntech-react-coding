@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 export default class Sport {
   constructor(competitionName, sportName, ...data) {
-    console.log(data)
     if (data) {
       Object.assign(this, ...data);
     }
