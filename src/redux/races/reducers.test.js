@@ -7,12 +7,12 @@ describe('Race reducers', () => {
   let state;
   beforeEach(() => {
     state = new Map({ race: {} });
-  })
+  });
 
   it('should return initital state', () => {
     const expectedResult = state;
     expect(raceReducers(undefined, {})).toEqual(expectedResult);
-  })
+  });
 
   it('should handle the getLatestRaceSuccess action correctly', () => {
     const expectedResult = state

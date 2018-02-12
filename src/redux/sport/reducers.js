@@ -9,10 +9,10 @@ export default function sportReducer(state = initState, action) {
   switch (action.type) {
     case actions.GET_LATEST_SPORT_SUCCESS:
       return state
-        .set('sport', action.sport)
+        .set('sport', action.sport);
     case actions.GET_LATEST_SPORT_ERROR:
       return state
-        .set('sport', {})
+        .set('sport', {});
     default:
       return state;
   }

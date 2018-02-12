@@ -8,10 +8,11 @@
     "react"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2017,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "experimentalObjectRestSpread": true
     }
   },
   "env": {
@@ -35,7 +36,6 @@
     "no-lone-blocks": 0,
     "jsx-quotes": 1,
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
-    "react/forbid-prop-types": [1, {"forbid": ["any"]}],
     "react/jsx-boolean-value": 1,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-curly-spacing": 1,

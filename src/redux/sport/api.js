@@ -22,4 +22,4 @@ async function getSportDetails() {
 
 export {
   getSportDetails
-}
+};

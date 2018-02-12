@@ -51,6 +51,6 @@ Widget.propTypes = {
   typeBet: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string
-}
+};
 
 export default Widget;

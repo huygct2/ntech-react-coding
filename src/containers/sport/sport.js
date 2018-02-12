@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 
 import Widget from '../../components/widget/widget';
@@ -13,7 +14,7 @@ const {
 
 class Sport extends Component {
   componentDidMount() {
-    this.props.getLatestSport()    
+    this.props.getLatestSport();
     this.fetchLatestSportInterval = window.setInterval(
       this.props.getLatestSport.bind(this), timeInterval * 1000);
   }
@@ -45,6 +46,11 @@ class Sport extends Component {
     );
   }
 }
+
+Sport.propTypes = {
+  sport: PropTypes.object,
+  getLatestSport: PropTypes.func
+};
 
 function mapStateToProps(state) {
   const { sport } = state.Sport.toJS();
