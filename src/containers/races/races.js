@@ -7,8 +7,6 @@ import actions from '../../redux/races/actions'
 
 import RaceContent from '../../components/races/content';
 
-import './style.scss'
-
 const {
   getLatestRace
 } = actions;

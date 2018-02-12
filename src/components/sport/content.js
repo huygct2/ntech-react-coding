@@ -4,24 +4,11 @@ import './style.scss'
 
 class SportContent extends Component {
   renderSportInfo() {
-    const sports = [
-      {
-        name: 'Tottenham',
-        returnWin: 2.00
-      },
-      {
-        name: 'Draw',
-        returnWin: 3.75
-      },
-      {
-        name: 'Arsenal',
-        returnWin: 3.40
-      }
-    ]
+    const { propositions = [] } = this.props;
 
     return (
       <div className="columns sports__bet">
-        {sports.map((sport, i) =>
+        {propositions.map((sport, i) =>
           <div key={i} className="column is-uppercase">
             <span className="has-text-weight-semibold">{sport.name}</span>
             <BetOdd returnWin={sport.returnWin.toFixed(2)} />
