@@ -21,12 +21,6 @@ export default class RelativeTime {
     return diffInSeconds
   }
 
-  static minutesBetween(raceTime, timeNow) {
-    const end = moment(raceTime)
-    const start = moment(timeNow)
-    return moment.duration(end.diff(start)).asMinutes()
-  }
-
   static secondsToParts(diffInSeconds, minutesToCountdown) {
     let absDiff = Math.abs(diffInSeconds)
     let days = Math.floor(absDiff / 86400)
