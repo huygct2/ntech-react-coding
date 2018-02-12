@@ -40,7 +40,7 @@ npm install
 After installing, your project should look like this:
 
 ```
-tabcorp/
+ntech-react-coding/
   README.md
   node_modules/
   package.json
