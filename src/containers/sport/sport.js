@@ -7,16 +7,14 @@ import SportContent from '../../components/sport/sportContent';
 import actions from '../../redux/sport/actions';
 import arsenalImg from '../../images/arsenal.jpg';
 import { timeInterval } from '../../constants/config';
+
 const {
   getLatestSport
 } = actions;
 
 class Sport extends Component {
-  componentWillMount() {
-    this.props.getLatestSport()
-  }
-
   componentDidMount() {
+    this.props.getLatestSport()    
     this.fetchLatestSportInterval = window.setInterval(
       this.props.getLatestSport.bind(this), timeInterval * 1000)
   }

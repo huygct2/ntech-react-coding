@@ -1,6 +1,5 @@
 import { Map } from "immutable";
 import actions from "./actions";
-import _ from 'lodash'
 
 const initState = new Map({
   sport: {}

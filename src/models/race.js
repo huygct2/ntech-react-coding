@@ -5,6 +5,8 @@ export default class Race {
     if (data) {
       Object.assign(this, ...data);
     }
-    this.runners = this.runners.slice(0, 6);
+    if(this.runners.length > 6) {
+      this.runners = this.runners.slice(0, 6);
+    }
   }
 }

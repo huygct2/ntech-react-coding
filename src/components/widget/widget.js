@@ -48,8 +48,8 @@ Widget.defaultProps = {
 };
 
 Widget.propTypes = {
-  typeBet: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
+  typeBet: PropTypes.string,
+  time: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string
 }
