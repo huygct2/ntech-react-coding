@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -16,6 +17,10 @@ class BetOdd extends Component {
 
 BetOdd.defaultProps = {
   returnWin: 0
+};
+
+BetOdd.propTypes = {
+  returnWin: PropTypes.any
 };
 
 export default BetOdd;

@@ -12,7 +12,7 @@ class RaceFooter extends Component {
         </div>
         <span>{description}</span>
       </div>
-    )
+    );
   }
 }
 
@@ -24,6 +24,6 @@ RaceFooter.defaultProps = {
 RaceFooter.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string
-}
+};
 
 export default RaceFooter;

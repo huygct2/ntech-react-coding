@@ -4,7 +4,7 @@ import moment from 'moment';
 import Timer from './timer';
 
 test('Timer component', () => {
-  const time = moment()
+  const time = moment();
   const component = renderer.create(
     <Timer
       time={time} 

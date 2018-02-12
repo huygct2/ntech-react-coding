@@ -50,7 +50,11 @@ Widget.defaultProps = {
 Widget.propTypes = {
   typeBet: PropTypes.string,
   description: PropTypes.string,
-  title: PropTypes.string
-}
+  title: PropTypes.string,
+  imageUrl: PropTypes.string,
+  content: PropTypes.any,
+  time: PropTypes.any,
+  timeNow: PropTypes.any
+};
 
 export default Widget;

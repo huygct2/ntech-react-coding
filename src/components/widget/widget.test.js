@@ -4,14 +4,14 @@ import moment from 'moment';
 import Widget from './widget';
 
 test('Widget component', () => {
-  const time = moment()
+  const time = moment();
   const component = renderer.create(
     <Widget
-      typeBet='Soccer'
+      typeBet="Soccer"
       time={time}
       timeNow={time}
-      title='EPL'
-      description='Arsenal'
+      title="EPL"
+      description="Arsenal"
     />
   );
   let tree = component.toJSON();

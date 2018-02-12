@@ -4,7 +4,7 @@ import RaceFooter from './raceFooter';
 
 test('RaceFooter component', () => {
   const component = renderer.create(
-    <RaceFooter title='View all markets' />
+    <RaceFooter title="View all markets" />
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

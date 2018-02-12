@@ -15,7 +15,7 @@ export default class Timer extends React.Component {
   componentDidMount() {
     this.intervailID = setInterval(
       () => this.tick(), 1000
-    )
+    );
   }
 
   componentWillUnmount() {
@@ -25,11 +25,11 @@ export default class Timer extends React.Component {
   tick() {
     this.setState({
       amountTime: RelativeTime.toParts(this.props.time)
-    })
+    });
   }
 
   render() {
-    const { amountTime } = this.state
+    const { amountTime } = this.state;
 
     return <time>
       Starts in {amountTime.map((time, i) => <span key={`line-${i}`}>
@@ -37,11 +37,11 @@ export default class Timer extends React.Component {
         <span className="unit-label">{time.unit} </span>
       </span>
       )}
-    </time>
+    </time>;
   }
 }
 
 Timer.propTypes = {
   time: PropTypes.any,
   timeNow: PropTypes.any  
-}
+};

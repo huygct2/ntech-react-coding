@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import BetOdd from '../betOdd/betOdd';
 import RaceFooter from '../races/raceFooter';
 
@@ -23,7 +24,7 @@ class SportContent extends Component {
       <div className="sports__header has-text-weight-semibold">
         Straight
       </div>
-    )
+    );
   }
 
   renderSportFooter(marketLength) {
@@ -42,5 +43,14 @@ class SportContent extends Component {
     );
   }
 }
+
+SportContent.defaultProps = {
+  marketLength: 0
+};
+
+SportContent.propTypes = {
+  marketLength: PropTypes.number,
+  propositions: PropTypes.array  
+};
 
 export default SportContent;
