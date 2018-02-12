@@ -1,4 +1,3 @@
-import moment from 'moment';
 import axios from 'axios';
 import _ from 'lodash';
 import Sport from '../../models/sport';

@@ -12,7 +12,6 @@ const PublicRoutes = () => (
   <Router>
     <div>
       <Header/>
-      <hr />
       <Switch>
         <Route path={paths.sport} component={Sport} />
         <Route path={paths.race} component={Races} />

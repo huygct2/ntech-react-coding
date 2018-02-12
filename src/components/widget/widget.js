@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import logoImg from '../../images/logo-ball.png';
 import Timer from '../timer/timer';
 
@@ -15,7 +14,7 @@ class Widget extends Component {
         <div className="card-image">
           <div className="filter-black"></div>
           <figure className="image is-2by1">
-            <img src={imageUrl} alt="Placeholder image" />
+            <img src={imageUrl} alt="background" />
           </figure>
           {
             typeBet ? <div className="box-left has-text-weight-bold is-uppercase">

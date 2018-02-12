@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import moment from 'moment';
 
 import Widget from '../../components/widget/widget';
 import actions from '../../redux/races/actions'
