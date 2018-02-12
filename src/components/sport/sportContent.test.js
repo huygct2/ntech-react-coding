@@ -8,6 +8,6 @@ test('SportContent Component', () => {
       propositions={[]}
       marketLength={20} />
   );
-  let tree = component.toJSON();
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

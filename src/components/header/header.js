@@ -7,7 +7,7 @@ export default class extends Component {
   render() {
     return (
       <nav className="navbar is-transparent">
-        <div id="navbarExampleTransparentExample" className="navbar-menu">
+        <div>
           <div className="navbar-start">
             <Link className="navbar-item has-text-weight-bold" to={paths.sport}>Sport</Link>
             <Link className="navbar-item has-text-weight-bold" to={paths.race}>Race</Link>

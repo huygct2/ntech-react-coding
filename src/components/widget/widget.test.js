@@ -14,6 +14,6 @@ test('Widget component', () => {
       description="Arsenal"
     />
   );
-  let tree = component.toJSON();
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

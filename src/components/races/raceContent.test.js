@@ -6,6 +6,6 @@ test('RaceFooter component', () => {
   const component = renderer.create(
     <RaceContent runners={[{}, {}]} />
   );
-  let tree = component.toJSON();
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
