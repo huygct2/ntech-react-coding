@@ -5,9 +5,7 @@ import RaceFooter from '../races/raceFooter';
 import './style.scss';
 
 class SportContent extends Component {
-  renderSportInfo() {
-    const { propositions = [] } = this.props;
-
+  renderSportInfo(propositions) {
     return (
       <div className="columns sports__bet">
         {propositions.map((sport, i) =>
@@ -28,17 +26,18 @@ class SportContent extends Component {
     )
   }
 
-  renderSportFooter() {
-    const { marketLength } = this.props;
+  renderSportFooter(marketLength) {
     return <RaceFooter title={`View all markets (${marketLength})`}/>
   }
 
   render() {
+    const { marketLength, propositions = [] } = this.props;
+
     return (
       <div className="sports has-text-centered">
         {this.renderSportHeader()}
-        {this.renderSportInfo()}
-        {this.renderSportFooter()}
+        {this.renderSportInfo(propositions)}
+        {this.renderSportFooter(marketLength)}
       </div>
     );
   }

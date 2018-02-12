@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Widget component 1`] = `
+<div
+  className="card widget"
+>
+  <div
+    className="card-image"
+  >
+    <div
+      className="filter-black"
+    />
+    <figure
+      className="image is-2by1"
+    >
+      <img
+        alt="Placeholder image"
+        src=""
+      />
+    </figure>
+    <div
+      className="box-left has-text-weight-bold is-uppercase"
+    >
+      <img
+        alt="logo sport"
+        src="logo-ball.png"
+      />
+      <span>
+        Soccer
+      </span>
+    </div>
+    <div
+      className="box-right has-text-white has-text-weight-bold"
+    >
+      <time>
+        Starts in 
+        <span>
+          <span
+            className="amount-label"
+          >
+            2
+          </span>
+          <span
+            className="unit-label"
+          >
+            h
+             
+          </span>
+        </span>
+      </time>
+    </div>
+    <div
+      className="content has-text-white"
+    >
+      <h2
+        className="content__title has-text-weight-bold is-uppercase"
+      >
+        EPL
+      </h2>
+      <span
+        className="content__description has-text-weight-semibold"
+      >
+        Arsenal
+      </span>
+    </div>
+  </div>
+  <div
+    className="card-content"
+  >
+    <div />
+  </div>
+</div>
+`;

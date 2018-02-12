@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RaceFooter component 1`] = `
+<div
+  className="sports__footer"
+>
+  <div
+    className="sports__all"
+  >
+    <a
+      className="has-text-weight-bold is-uppercase"
+    >
+      View all markets
+    </a>
+  </div>
+  <span>
+    Prices indicative until login & may change before bet is accepted
+  </span>
+</div>
+`;

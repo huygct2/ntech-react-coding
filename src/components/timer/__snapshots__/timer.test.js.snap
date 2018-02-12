@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer component 1`] = `
+<time>
+  Starts in 
+  <span>
+    <span
+      className="amount-label"
+    >
+      2
+    </span>
+    <span
+      className="unit-label"
+    >
+      h
+       
+    </span>
+  </span>
+</time>
+`;

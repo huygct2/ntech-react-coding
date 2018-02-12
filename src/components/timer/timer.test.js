@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import BetOdd from './betOdd';
+import Timer from './timer';
 
-test('BetOdd component', () => {
+test('Timer component', () => {
   const component = renderer.create(
-    <BetOdd returnWin={1.1} />
+    <Timer time='2018-02-12T11:00:00.000Z' />
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

@@ -15,4 +15,8 @@ class BetOdd extends Component {
   }
 }
 
+BetOdd.defaultProps = {
+  returnWin: 0
+};
+
 export default BetOdd

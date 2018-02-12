@@ -5,9 +5,9 @@ import Enzyme, { shallow } from 'enzyme';
 import { Map } from 'immutable';
 import thunk from 'redux-thunk'
 
-import SportContainer from './sport';
+import RaceContainer from './races';
 import Widget from '../../components/widget/widget';
-import Sport from '../../models/sport';
+import Race from '../../models/race';
 
 import '../../setup';
 
@@ -17,14 +17,14 @@ describe('Sport', () => {
   beforeEach(() => {
     mockStore = configureMockStore([thunk]);
     store = mockStore({
-      Sport: new Map({
-        sport: new Sport(20, 'EPL', 'Chelsea', { startTime: Date() })
+      Race: new Map({
+        race: new Race({})
       })
     });
   });
 
   test('it renders Widget component', () => {
-    const wrapper = shallow(<SportContainer store={store} />);
+    const wrapper = shallow(<RaceContainer store={store} />);
     expect(wrapper.dive().find(Widget)).toHaveLength(1);
   });
 });

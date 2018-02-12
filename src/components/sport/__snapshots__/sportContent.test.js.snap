@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SportContent Component 1`] = `
+<div
+  className="sports has-text-centered"
+>
+  <div
+    className="sports__header has-text-weight-semibold"
+  >
+    Straight
+  </div>
+  <div
+    className="columns sports__bet"
+  />
+  <div
+    className="sports__footer"
+  >
+    <div
+      className="sports__all"
+    >
+      <a
+        className="has-text-weight-bold is-uppercase"
+      >
+        View all markets (20)
+      </a>
+    </div>
+    <span>
+      Prices indicative until login & may change before bet is accepted
+    </span>
+  </div>
+</div>
+`;

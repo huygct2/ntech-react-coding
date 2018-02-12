@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import BetOdd from './betOdd';
+import RaceFooter from './raceFooter';
 
-test('BetOdd component', () => {
+test('RaceFooter component', () => {
   const component = renderer.create(
-    <BetOdd returnWin={1.1} />
+    <RaceFooter title='View all markets' />
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
