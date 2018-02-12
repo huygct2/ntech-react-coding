@@ -29,6 +29,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * `Enzyme`: JavaScript Testing utilities for React.
 
+* `Eslint`: The pluggable linting utility for JavaScript.
+
 ## Getting started
 First you must install Node.js (which comes with npm). Get the latest version here: https://nodejs.org/en/download/
 
