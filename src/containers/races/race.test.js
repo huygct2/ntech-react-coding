@@ -23,7 +23,7 @@ describe('Sport', () => {
     });
   });
 
-  test('it renders Widget component', () => {
+  test('it renders Widget component for Races', () => {
     const wrapper = shallow(<RaceContainer store={store} />);
     expect(wrapper.dive().find(Widget)).toHaveLength(1);
   });

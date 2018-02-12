@@ -51,7 +51,7 @@ class RaceContent extends Component {
   }
 
   renderRunnerFooter() {
-    return <RaceFooter title={'View full race card'}/>
+    return <RaceFooter title='View full race card'/>
   }
 
   render() {
