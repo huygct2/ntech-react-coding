@@ -22,4 +22,4 @@ async function getRaceDetails() {
 
 export {
   getRaceDetails
-}
+};

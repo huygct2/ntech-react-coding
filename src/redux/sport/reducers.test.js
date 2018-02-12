@@ -7,12 +7,12 @@ describe('Sport reducers', () => {
   let state;
   beforeEach(() => {
     state = new Map({ sport: {} });
-  })
+  });
 
   it('should return initital state', () => {
     const expectedResult = state;
     expect(sportReducers(undefined, {})).toEqual(expectedResult);
-  })
+  });
 
   it('should handle the getLatestSportSuccess action correctly', () => {
     const expectedResult = state

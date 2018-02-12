@@ -9,13 +9,13 @@ const sportActions = {
     return {
       type: sportActions.GET_LATEST_SPORT_SUCCESS,
       sport
-    }
+    };
   },
   getLatestSportError(error) {
     return {
       type: sportActions.GET_LATEST_SPORT_ERROR,
       error
-    }
+    };
   },
   getLatestSport: () => {
     return function (dispatch) {

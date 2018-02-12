@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 
 import Widget from '../../components/widget/widget';
@@ -27,8 +28,8 @@ class Races extends Component {
     const { race = {} } = this.props;
 
     const content = (
-      <RaceContent runners={race.runners}/>
-    )
+      <RaceContent runners={race.runners} />
+    );
 
     return (
       <div className="containers-wrapper">
@@ -42,6 +43,11 @@ class Races extends Component {
     );
   }
 }
+
+Races.propTypes = {
+  race: PropTypes.object,
+  getLatestRace: PropTypes.func
+};
 
 function mapStateToProps(state) {
   const { race } = state.Race.toJS();

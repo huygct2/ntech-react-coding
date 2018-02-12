@@ -9,13 +9,13 @@ const raceActions = {
     return {
       type: raceActions.GET_LATEST_RACE_SUCCESS,
       race
-    }
+    };
   },
   getLatestRaceError(error) {
     return {
       type: raceActions.GET_LATEST_RACE_ERROR,
       error
-    }
+    };
   },
   getLatestRace: () => {
     return function (dispatch) {
