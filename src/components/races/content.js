@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BetOdd from '../bet-odd'
+import BetOdd from '../betOdd/betOdd'
 import './style.scss'
 
 class RaceContent extends Component {
