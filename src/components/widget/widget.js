@@ -43,7 +43,7 @@ Widget.defaultProps = {
   imageUrl: '',
   content: <div />,
   description: '',
-  title: 'EPL',
+  title: '',
   typeBet: ''
 };
 
